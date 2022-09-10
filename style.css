@@ -1,5 +1,12 @@
+:root{
+   --background-color:#bfeafd;
+   --primary-color:#6babc9;
+   --secondary-color:#d4eeff;
+}
+
 body{
-   background-color: #bfeafd;
+   /* background-color: #bfeafd; */
+   background-color: var(--background-color);
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -7,6 +14,8 @@ body{
    height: 100%;
    width: 100%;
 }
+
+
 
 .choose{
    position:fixed;
@@ -23,10 +32,14 @@ body{
 }
 
 .weather-app__body {
-   background-color: #d4eeff;
+   display: flex;
+
+   background-color: var(--secondary-color);
    box-shadow: 0 0 10px 1px rgb(166, 188, 194);
    border-radius: 25px;
-   width: 20rem;
+   
+
+   /* min-width: 20rem; */
    height: 30rem;
 }
 
@@ -35,7 +48,7 @@ body{
    width: 100%;
    display: flex;
    flex-direction: column;
-   color: #6babc9;
+   color:var(--primary-color);
 }
 .info__city {
    flex:1 1 15%;
@@ -47,6 +60,7 @@ body{
 }
 .info__image {
    flex:1 1 35%;
+   /* padding: 0 4rem; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -74,8 +88,8 @@ body{
    flex:1 1 30%;
    display: flex;
    justify-content: space-between;
-   padding: 0 1rem;
    text-align: center;
+   /* padding: 0 1rem; */
 }
 
 .additional-info {
@@ -83,16 +97,17 @@ body{
 
 }
 .additional-info__wind {
-   flex: 33.33%;
+   /* flex:1 1 33.33%; */
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 0 1.5rem 0 1.5rem;
 }
 
 .additional-info__title{
    justify-content: flex-start;
-   color:#95a2a8;
+   color:#839aa5;
    font-size: 0.8rem;
 }
 
@@ -102,11 +117,13 @@ body{
 }
 
 .additional-info__humidity {
-   flex:  33.33%;
+   /* flex: 1 1 33.33%; */
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 0 1.5rem 0 1.5rem;
+
 }
 .additional-info__humidity-value {
    padding: 2rem 0 0 0;
@@ -114,11 +131,13 @@ body{
 }
 
 .additional-info__feels-like {
-   flex: 33.33%;
+   /* flex: 1 1 33.33%; */
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 0 1.5rem 0 1.5rem;
+
 }
 
 .additional-info__feels-like-value {

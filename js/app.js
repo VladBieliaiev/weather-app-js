@@ -1,15 +1,25 @@
 const api = "ce6aeb7e8883c1fe4c551570ff34de02";
-const choose = document.getElementById('city');
+const choose = document.getElementById('input');
+const btn = document.getElementById('btn');
+console.log(btn)
 
-// console.log(city);
+let city = 'wroclaw';
 
-let city = choose.value;
+btn.addEventListener('click', () => {
+   city = choose.value;
+   updateWeather();
+   choose.value = '';
+})
+
+
 
 choose.addEventListener('change', (e) => {
    city = e.target.value;
-   console.log(city);
+   choose.value = '';
    updateWeather();
 })
+
+
 
 const updateWeather = () => {
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`)
@@ -26,7 +36,18 @@ const updateWeather = () => {
          document.querySelector('.additional-info__humidity-value').innerHTML = `${data.main.humidity}%`
          document.querySelector('.additional-info__feels-like-value').innerHTML = `${Math.round(data.main.feels_like - 273)}&#x2103; `
       })
+
 }
+
+const a = () => {
+   fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api}`)
+      .then(resp => resp.json())
+      .then(data => {
+         console.log(data)
+      });
+}
+
+a();
 
 updateWeather();
 
