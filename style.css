@@ -1,11 +1,10 @@
 :root{
-   --background-color:#bfeafd;
-   --primary-color:#6babc9;
-   --secondary-color:#d4eeff;
+   --background-color:#70c1e4;
+   --primary-color:#f7f7f7;
+   --secondary-color:#50a4d1;
 }
 
 body{
-   /* background-color: #bfeafd; */
    background-color: var(--background-color);
    display: flex;
    flex-direction: column;
@@ -35,12 +34,8 @@ body{
    display: flex;
 
    background-color: var(--secondary-color);
-   box-shadow: 0 0 10px 1px rgb(166, 188, 194);
+   box-shadow: 0 0 10px 1px rgb(112, 160, 172);
    border-radius: 25px;
-   
-
-   /* min-width: 20rem; */
-   height: 30rem;
 }
 
 .info {
@@ -57,10 +52,18 @@ body{
    align-items: flex-end;
    font-weight: 800;
    font-size: 1.8rem;
+   padding: 1rem 0 0 0;
+}
+
+.country{
+   text-transform: lowercase;
+   font-weight: 200;
+   /* font-size: 1.7rem; */
+   padding-left: 0.3rem;
+   color: rgba(255, 255, 255, 0.836);
 }
 .info__image {
    flex:1 1 35%;
-   /* padding: 0 4rem; */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -82,6 +85,7 @@ body{
    text-align: center;
    font-size: 1.5rem;
    font-weight: 400;
+   padding: 1rem 0;
 }
 
 .info__additional {
@@ -93,11 +97,11 @@ body{
 }
 
 .additional-info {
-   border-top: 1px solid #6babc9;
-
+   border-bottom: 1px solid var(--primary-color);
+   padding: 1rem 1rem 2rem 1rem;
 }
 .additional-info__wind {
-   /* flex:1 1 33.33%; */
+   flex:1 1 33.33%;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -107,8 +111,9 @@ body{
 
 .additional-info__title{
    justify-content: flex-start;
-   color:#839aa5;
-   font-size: 0.8rem;
+   color:var(--primary-color);
+   font-size: 1rem;
+   padding-top: 1rem;
 }
 
 .additional-info__wind-value {
@@ -117,7 +122,7 @@ body{
 }
 
 .additional-info__humidity {
-   /* flex: 1 1 33.33%; */
+   flex: 1 1 33.33%;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -131,7 +136,7 @@ body{
 }
 
 .additional-info__feels-like {
-   /* flex: 1 1 33.33%; */
+   flex: 1 1 33.33%;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -143,4 +148,24 @@ body{
 .additional-info__feels-like-value {
    padding: 2rem 0 0 0;
    font-size: 1.2rem;
+}
+
+
+.forecast {
+   display: flex;
+   justify-content:space-between;
+   padding: 2rem 1rem 1rem;
+}
+.forecast__block {
+   text-align: center;
+}
+
+.forecast__time {
+   font-size: 0.8rem;
+}
+.forecast__img {
+   /* padding: 0.3rem 0; */
+}
+.forecast__temp {
+   font-size: 0.8rem;
 }
