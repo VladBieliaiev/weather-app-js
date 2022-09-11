@@ -23,7 +23,7 @@ const updateWeather = () => {
          console.log(data);
 
          document.querySelector('.info__city').innerHTML = `${data.name}.<span class="country">${data.sys.country}</span>`
-         document.querySelector('.info__image').innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" width="200px" height="200px"></img>`
+         document.querySelector('.info__image').innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" width="200px" height="200px"></img>`
          document.querySelector('.info__temp').innerHTML = `${Math.round(data.main.temp - 273)} &#8451;`
          document.querySelector('.info__description').innerHTML = `${data.weather[0].description}`;
 
@@ -51,7 +51,7 @@ const forecast = () => {
                      ${obj.toLocaleString("en-US", { hour: "numeric" })}
                   </div>
                   <div class="forecast__img">
-                     <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png" width="50px" height="50px"><img>
+                     <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@4x.png" width="50px" height="50px"><img>
                   </div>
                   <div class="forecast__temp">
                      ${Math.round(data.list[i].main.temp - 273)}&#8451
@@ -69,5 +69,3 @@ const updateContent = () => {
 }
 
 updateContent();
-
-
