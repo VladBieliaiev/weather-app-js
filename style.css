@@ -17,8 +17,8 @@ body{
 
 
 .search{
-   position:fixed;
-   top: 3rem;
+   /* position:fixed; */
+   margin-bottom:3rem ;
    display: flex;
    font-family: 'Roboto Slab', serif;
    font-weight: normal;
@@ -55,11 +55,6 @@ body{
 }
 
 @media(max-width: 424px){
-   .search{
-      position: static;
-      margin-bottom: 2rem;
-   }
-
    .search-btn{
       margin: 0 0 0 0.2rem;
       font-size: 0.8rem;
