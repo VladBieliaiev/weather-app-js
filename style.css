@@ -16,7 +16,7 @@ body{
 
 
 
-.choose{
+.search{
    position:fixed;
    top: 3rem;
    display: flex;
@@ -55,6 +55,10 @@ body{
 }
 
 @media(max-width: 424px){
+   .search{
+      top:1rem
+   }
+
    .search-btn{
       margin: 0 0 0 0.2rem;
       font-size: 0.8rem;
