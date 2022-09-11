@@ -17,9 +17,6 @@ body{
 
 
 .choose{
-   /* display: flex; */
-   /* flex-direction: column; */
-   /* align-items: center; */
    position:fixed;
    top: 3rem;
    font-family: 'Roboto Slab', serif;
@@ -55,6 +52,15 @@ body{
    background-color: #6cb3da;
 }
 
+@media(max-width: 424px){
+   .search-btn{
+      margin: 0 0 0 0.2rem;
+   }
+   .choose{
+      top:1.5rem
+   }
+}
+
 .weather-app {
    display: flex;
    justify-content: center;
@@ -67,7 +73,7 @@ body{
    background-color: var(--secondary-color);
    /* box-shadow: 0 0 10px 1px rgb(27, 93, 109); */
    border-radius: 25px;
-   max-width: 24rem;
+   /* max-width: 24rem; */
 
 }
 
@@ -95,11 +101,26 @@ body{
    padding-left: 0.3rem;
    color: rgba(255, 255, 255, 0.836);
 }
+
+@media(max-width: 424px){
+   .info__city {
+      font-size: 1.2rem;
+      padding: 1rem 0 0 0;
+   }
+}
+
 .info__image {
    flex:1 1 35%;
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@media(max-width: 424px){
+   .info__image img{
+      width:200px;
+      height: 200px;
+   }
 }
 .info__temp {
    flex:1 1 10%;
@@ -121,6 +142,14 @@ body{
    padding: 1rem 0;
 }
 
+@media(max-width: 424px){
+   .info__temp {
+      font-size: 1.5rem;
+   }
+   .info__description{
+      font-size: 1rem;
+   }
+}
 .info__additional {
    flex:1 1 30%;
    display: flex;
@@ -133,13 +162,11 @@ body{
    border-bottom: 1px solid var(--primary-color);
    padding: 1rem 1rem 2rem 1rem;
 }
-.additional-info__wind {
-   flex:1 1 33.33%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 0 1.5rem 0 1.5rem;
+
+@media(max-width: 424px){
+   .additional-info {
+      padding: 0 0 1rem;
+   }
 }
 
 .additional-info__title{
@@ -149,34 +176,35 @@ body{
    padding-top: 1rem;
 }
 
+.additional-info__block{
+   flex:1 1 33.33%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0 1.5rem 0 1.5rem;
+}
+
+
+
+@media(max-width: 424px){
+   .additional-info__block{
+      padding: 0 0.5rem 0 0.5rem;
+   }
+}
+
 .additional-info__wind-value {
    padding: 2rem 0 0 0;
    font-size: 1.2rem;
 }
 
-.additional-info__humidity {
-   flex: 1 1 33.33%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 0 1.5rem 0 1.5rem;
 
-}
 .additional-info__humidity-value {
    padding: 2rem 0 0 0;
    font-size: 1.2rem;
 }
 
-.additional-info__feels-like {
-   flex: 1 1 33.33%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 0 1.5rem 0 1.5rem;
 
-}
 
 .additional-info__feels-like-value {
    padding: 2rem 0 0 0;
@@ -198,10 +226,14 @@ body{
 .forecast__time {
    font-size: 0.8rem;
 }
-.forecast__img {
-}
+
 
 .forecast__temp {
    font-size: 0.8rem;
 }
+
+
+
+
+
 
