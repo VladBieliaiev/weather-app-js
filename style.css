@@ -56,7 +56,8 @@ body{
 
 @media(max-width: 424px){
    .search{
-      top:5px;
+      position: static;
+      margin-bottom: 2rem;
    }
 
    .search-btn{
