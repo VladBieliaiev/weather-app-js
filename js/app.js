@@ -27,9 +27,9 @@ const updateWeather = () => {
          document.querySelector('.info__temp').innerHTML = `${Math.round(data.main.temp - 273)} &#8451;`
          document.querySelector('.info__description').innerHTML = `${data.weather[0].description}`;
 
-         document.querySelector('.additional-info__wind-value').innerHTML = `${data.wind.speed}m/s`
-         document.querySelector('.additional-info__humidity-value').innerHTML = `${data.main.humidity}%`
-         document.querySelector('.additional-info__feels-like-value').innerHTML = `${Math.round(data.main.feels_like - 273)}&#x2103; `
+         document.getElementById('wind').innerHTML = `${data.wind.speed}m/s`
+         document.getElementById('humindity').innerHTML = `${data.main.humidity}%`
+         document.getElementById('feelsLike').innerHTML = `${Math.round(data.main.feels_like - 273)}&#x2103; `
       })
 
 }
