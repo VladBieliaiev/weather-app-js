@@ -64,7 +64,7 @@ const forecast = () => {
 
 const updateContent = () => {
    document.querySelector('.forecast').innerHTML = ``
-   // forecast();
+   forecast();
    updateWeather();
 }
 
